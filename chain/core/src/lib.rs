@@ -80,7 +80,7 @@ pub mod substate;
 pub mod error;
 pub mod engines;
 pub mod native;
-
+pub mod private;
 pub mod libchain;
 pub mod filters;
 pub mod contracts;

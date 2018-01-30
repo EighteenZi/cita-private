@@ -15,6 +15,9 @@ members = ["auth"
 ,"tests/latency"
 ,"tests/jsonrpc_performance"
 ,"tests/benchmark_ws"
+,"share_libs/rust-sgx-sdk/samplecode/hello-rust/app"
+,"share_libs/rust-sgx-sdk/samplecode/hello-rust/enclave"
+,"chain/core/src/private/enclave"
 ]
 
 

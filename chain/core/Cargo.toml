@@ -2,6 +2,7 @@
 name = "core"
 version = "0.1.0"
 authors = ["u2 <zhangyaning1985@gmail.com>"]
+build = "build.rs"
 
 [dependencies]
 libproto = {path = "../../share_libs/proto"}
@@ -47,6 +48,9 @@ proof = { path = "../../consensus/proof" }
 common-types = { path = "../types" }
 jsonrpc_types = { path = "../../jsonrpc/types"}
 clippy = {version = "*", optional = true}
+
+sgx_types = { path = "../../share_libs/rust-sgx-sdk/sgx_types" }
+sgx_urts = { path = "../../share_libs/rust-sgx-sdk/sgx_urts" }
 
 [dev-dependencies]
 rand = "0.3"

@@ -139,10 +139,11 @@ use std::str::FromStr;
 use util::{H256, U256, Address};
 #[test]
 fn test_native_contract() {
+    println!("==========test begin==========");
     let factory = Factory::default();
     let mut ext = FakeExt::new();
     let native_addr = Address::from_str("0x0000000000000000000000000000000000000400").unwrap();
-    let value = U256::from(0x1234);
+    let value = U256::from(1123);
     {
         let mut params = ActionParams::default();
         let mut input = Vec::new();
@@ -171,9 +172,11 @@ fn test_native_contract() {
                     //*i = deserialize_from::<&[u8], _, Infinite, BigEndian>(&mut data.get(index..(index + 8)).unwrap(), Infinite).expect("failed to serialize u64");
                     *i = deserialize_from::<&[u8], _, Infinite, BigEndian>(&mut data, Infinite).expect("failed to serialize u64");
                 }
+                println!("output===={:?}", real);
                 assert!(real == value);
             }
             _ => assert!(false, "no output data"),
         };
     }
+    println!("==========test end==========");
 }
